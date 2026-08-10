@@ -1,0 +1,22 @@
+[
+	{
+		"context": "Terminal",
+		"bindings": {
+			"shift-enter": ["terminal::SendText", "\u001b\r"]
+		}
+	},
+	{
+		"context": "Editor",
+		"bindings": {
+			"alt-shift-i": "editor::SplitSelectionIntoLines",
+			"ctrl-alt-down": "editor::AddSelectionBelow",
+			"ctrl-alt-up": "editor::AddSelectionAbove",
+			"ctrl-left": "editor::MoveToBeginningOfLine",
+			"ctrl-right": "editor::MoveToEndOfLine",
+			"ctrl-shift-left": "editor::SelectToBeginningOfLine",
+			"ctrl-shift-right": "editor::SelectToEndOfLine",
+			"shift-alt-down": "editor::DuplicateLineDown",
+			"shift-alt-up": "editor::DuplicateLineUp"
+		}
+	}
+]

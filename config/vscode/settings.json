@@ -1,0 +1,62 @@
+{
+	"[csv]": {
+		"files.encoding": "utf8bom"
+	},
+	"[jsonc]": {
+		"prettier.trailingComma": "none"
+	},
+	"[liquid]": {
+		"editor.defaultFormatter": "Shopify.theme-check-vscode"
+	},
+	"[markdown]": {
+		"editor.fontFamily": "'엘리스 디지털코딩체 ver.H', 'Elice DigitalCoding OTF', monospace",
+		"prettier.tabWidth": 2,
+		"prettier.useTabs": false
+	},
+	"[svg]": {
+		"editor.defaultFormatter": "jock.svg"
+	},
+	"[tsv]": {
+		"files.encoding": "utf8bom"
+	},
+	"css.lint.unknownAtRules": "ignore",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.renderSideBySide": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "explicit"
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.fontFamily": "'구름 산스 코드 400', 'Goorm Sans Code', monospace",
+	"editor.formatOnSave": true,
+	"editor.inlineSuggest.edits.showCollapsed": true,
+	"editor.insertSpaces": false,
+	"editor.minimap.enabled": false,
+	"editor.renderWhitespace": "none",
+	"editor.stickyScroll.enabled": true,
+	"editor.tabSize": 2,
+	"emmet.includeLanguages": {
+		"markdown": "html"
+	},
+	"files.insertFinalNewline": true,
+	"js/ts.implicitProjectConfig.checkJs": true,
+	"js/ts.updateImportsOnFileMove.enabled": "always",
+	"markdown-preview-enhanced.previewTheme": "github-dark.css",
+	"markdown.copyFiles.destination": {
+		"*": ".assets/"
+	},
+	"prettier.printWidth": 100,
+	"prettier.quoteProps": "consistent",
+	"prettier.singleQuote": true,
+	"prettier.trailingComma": "all",
+	"prettier.useTabs": true,
+	"svelte.enable-ts-plugin": true,
+	"svg.preview.background": "transparent",
+	"svg.preview.mode": "svg",
+	"terminal.integrated.enablePersistentSessions": false,
+	"window.nativeTabs": true,
+	"workbench.editorAssociations": {
+		"*.svg": "default"
+	},
+	"workbench.startupEditor": "none"
+}

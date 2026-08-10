@@ -1,0 +1,106 @@
+{
+	"agent": {
+		"dock": "right",
+		"favorite_models": [],
+		"model_parameters": [],
+		"sidebar_side": "right"
+	},
+	"agent_servers": {
+		"claude-acp": {
+			"default_config_options": {
+				"mode": "bypassPermissions",
+				"model": "default"
+			},
+			"type": "registry"
+		}
+	},
+	"base_keymap": "VSCode",
+	"buffer_font_family": "goorm Sans Code", // 구름 산스 코드 400
+	"buffer_font_features": {
+		"calt": false
+	},
+	"buffer_font_size": 13.5,
+	"cli_default_open_behavior": "existing_window",
+	"collaboration_panel": {
+		"dock": "left"
+	},
+	"diff_view_style": "split",
+	"ensure_final_newline_on_save": true,
+	"format_on_save": "on",
+	"git_panel": {
+		"dock": "left"
+	},
+	"hard_tabs": true,
+	"languages": {
+		"JavaScript": {
+			"formatter": [
+				{
+					"code_action": "source.organizeImports"
+				},
+				{
+					"code_action": "source.fixAll.eslint"
+				},
+				"prettier"
+			]
+		},
+		"Markdown": {
+			"hard_tabs": false
+		},
+		"Svelte": {
+			"formatter": [
+				{
+					"code_action": "source.organizeImports"
+				},
+				{
+					"code_action": "source.fixAll.eslint"
+				},
+				"prettier"
+			],
+			"language_servers": ["!oxlint", "..."]
+		},
+		"TypeScript": {
+			"formatter": [
+				{
+					"code_action": "source.organizeImports"
+				},
+				{
+					"code_action": "source.fixAll.eslint"
+				},
+				"prettier"
+			]
+		}
+	},
+	"lsp": {
+		"vtsls": {
+			"enable_lsp_tasks": true,
+			"settings": {
+				"javascript": {
+					"updateImportsOnFileMove": {
+						"enabled": "always"
+					}
+				},
+				"typescript": {
+					"updateImportsOnFileMove": {
+						"enabled": "always"
+					}
+				}
+			}
+		}
+	},
+	"outline_panel": {
+		"dock": "left"
+	},
+	"project_panel": {
+		"dock": "left"
+	},
+	"tab_size": 2,
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false
+	},
+	"theme": {
+		"dark": "Ayu Dark",
+		"light": "Ayu Light",
+		"mode": "system"
+	}
+}
