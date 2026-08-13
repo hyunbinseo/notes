@@ -1,4 +1,4 @@
-Use `pnpm`. Don't use `npx` or `npm` on your own — only when they're defined in `.mcp.json`.
+Use `pnpm`. Don't use `npm` or `npx` - they are not available.
 
 If an MCP server fails to connect (e.g. `/mcp` shows an error like `ENOENT`), warn the user about it.
 
