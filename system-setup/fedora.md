@@ -49,17 +49,28 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 ```bash
 # See https://code.visualstudio.com/docs/setup/linux
-sudo dnf install code # or code-insiders
+sudo dnf install -y code # or code-insiders
 
 # See https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/
-sudo dnf install google-chrome-stable
+sudo dnf install -y google-chrome-stable
+```
+
+## Setup Tailscale
+
+See https://tailscale.com/kb/1130/install-fedora
+
+```bash
+sudo dnf install -y tailscale
+sudo systemctl enable --now tailscaled
+sudo tailscale up
+# sudo tailscale set --ssh
 ```
 
 ## Setup Zsh
 
 ```bash
 # See https://wiki.archlinux.org/title/Command-line_shell
-sudo dnf install zsh
+sudo dnf install -y zsh
 chsh -l
 chsh -s /bin/zsh
 ```
@@ -75,7 +86,7 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ## Replace Korean IME
 
 ```bash
-sudo dnf install fcitx5 fcitx5-hangul
+sudo dnf install -y fcitx5 fcitx5-hangul
 # KDE / 시스템 설정 / 키보드 / 가상 키보드 / Fcitx 5 선택 후 적용
 ```
 
@@ -84,8 +95,8 @@ sudo dnf install fcitx5 fcitx5-hangul
 e.g. F12 as HOME on HP EliteBook X G1i
 
 ```bash
-sudo dnf copr enable alternateved/keyd
-sudo dnf install keyd
+sudo dnf copr enable -y alternateved/keyd
+sudo dnf install -y keyd
 sudo systemctl enable keyd --now
 sudo nano /etc/keyd/default.conf # See https://github.com/rvaiya/keyd
 ```
