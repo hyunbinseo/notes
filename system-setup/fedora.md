@@ -55,6 +55,14 @@ sudo dnf install -y code # or code-insiders
 sudo dnf install -y google-chrome-stable
 ```
 
+## Install Firefox
+
+Fedora's `firefox` package tracks stable only. To install `firefox-beta`, `firefox-nightly`, or similar, add [Mozilla's official RPM repository](https://support.mozilla.org/en-US/kb/install-firefox-linux).
+
+If Fedora's `firefox` package is already installed, switching to the Mozilla repo can fail:
+
+> 문제: 설치된 꾸러미 firefox-langpacks-153.0.3-1.fc44.x86_64에는 firefox = 153.0.3-1.fc44이 필요하지만, 공급 업체가 없어 설치할 수 없습니다
+
 ## Setup Tailscale
 
 See https://tailscale.com/kb/1130/install-fedora
