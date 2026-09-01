@@ -9,6 +9,17 @@
 					"run": "onSave"
 				}
 			}
+		},
+		"oxlint": {
+			"initialization_options": {
+				"settings": {
+					"configPath": null,
+					"disableNestedConfig": false,
+					"fixKind": "safe_fix",
+					"run": "onType",
+					"unusedDisableDirectives": "deny"
+				}
+			}
 		}
 	},
 	"prettier": { "allowed": false }
