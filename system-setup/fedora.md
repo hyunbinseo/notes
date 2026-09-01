@@ -36,6 +36,10 @@ EOF
 sudo systemctl enable --now dnf-automatic.timer
 ```
 
+### Disable Discover Notifications
+
+시스템 설정 / 소프트웨어 업데이트 / 알림 빈도: 하지 않음
+
 ## Enable Flathub
 
 See https://flathub.org/setup/Fedora
