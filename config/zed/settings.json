@@ -25,6 +25,10 @@
 		"dock": "left"
 	},
 	"diff_view_style": "split",
+	"edit_predictions": {
+		"allow_data_collection": "no",
+		"provider": "mercury"
+	},
 	"ensure_final_newline_on_save": true,
 	"format_on_save": "on",
 	"git_panel": {
@@ -34,12 +38,8 @@
 	"languages": {
 		"JavaScript": {
 			"formatter": [
-				{
-					"code_action": "source.organizeImports"
-				},
-				{
-					"code_action": "source.fixAll.eslint"
-				},
+				{ "code_action": "source.organizeImports" },
+				{ "code_action": "source.fixAll.eslint" },
 				"prettier"
 			]
 		},
@@ -48,24 +48,16 @@
 		},
 		"Svelte": {
 			"formatter": [
-				{
-					"code_action": "source.organizeImports"
-				},
-				{
-					"code_action": "source.fixAll.eslint"
-				},
+				{ "code_action": "source.organizeImports" },
+				{ "code_action": "source.fixAll.eslint" },
 				"prettier"
 			],
 			"language_servers": ["!oxlint", "..."]
 		},
 		"TypeScript": {
 			"formatter": [
-				{
-					"code_action": "source.organizeImports"
-				},
-				{
-					"code_action": "source.fixAll.eslint"
-				},
+				{ "code_action": "source.organizeImports" },
+				{ "code_action": "source.fixAll.eslint" },
 				"prettier"
 			]
 		}
