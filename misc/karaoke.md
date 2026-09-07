@@ -1,0 +1,102 @@
+# 노래방 애창곡
+
+- 10cm - 폰서트
+- 2NE1 - Come Back Home
+- 2NE1 - Hate You
+- 2NE1 - Ugly
+- Adam Levine - Lost Stars
+- Adele - Hello
+- Adele - Rolling in the Deep
+- Anne-Marie - 2002
+- Avril Lavigne - Anything but Ordinary
+- Avril Lavigne - Complicated
+- Avril Lavigne - I'm With You
+- Avril Lavigne - Innocence
+- Avril Lavigne - Nobody's Fool
+- Avril Lavigne - Nobody's Home
+- Avril Lavigne - When You're Gone
+- Avril Lavigne - Wish You Were Here
+- Beyoncé - Love on Top
+- Billie Eilish - Wish You Were Gay
+- Boys Like Girls - The Great Escape
+- Boys Like Girls - Two Is Better Than One
+- Charlie Puth - One Call Away
+- Ellie Goulding - Love Me Like You Do
+- G-Dragon - Butterfly
+- Imagine Dragons - Shots
+- Jason Mraz - I'm Yours
+- Jessie J - Price Tag
+- Justin Bieber - Love Yourself
+- Karina - Slow Motion
+- Katy Perry - The One That Got Away
+- Kelly Clarkson - If No One Will Listen
+- Kelly Clarkson - Stronger (What Doesn't Kill You)
+- Michael Bublé - Haven't Met You Yet
+- Pink - Just Give Me a Reason
+- Rihanna - Love the Way You Lie (Part II)
+- Ruel - Painkiller
+- Sara Bareilles - Love Song
+- Sia - Snowman
+- Taylor Swift - Love Story
+- Zendaya, Zac Efron - Rewrite the Stars
+- 경서 - 밤하늘의 별을
+- 긱스 - I'm Officially Missing You
+- 김건모 - 잠 못 드는 밤 비는 내리고
+- 김아중 - Maria
+- 김예림 - 행복한 나를
+- 넬 - Thank You
+- 넬 - 지구가 태양을 네 번
+- 달의하루 - 염라 (Karma)
+- 럼블피쉬 - 예감 좋은 날
+- 백아연 - 이럴거면 그러지 말지
+- 백예린 - 우주를 건너
+- 백지영 - 잊지 말아요
+- 백지영 - 총 맞은 것처럼
+- 버즈 - 나에게로 떠나는 여행
+- 버즈 - 활주 (Opening)
+- 볼빨간사춘기 - *
+- 부활 - 추억이면
+- 브라운아이드걸스 - 잠에 취해
+- 빅마마 - 체념
+- 산이 - 한여름밤의 꿀
+- 소녀시대 - Ooh La-La!
+- 소녀시대 - 다시 만난 세계
+- 아이유 - Blueming
+- 아이유 - Love Poem
+- 아이유 - 금요일에 만나요
+- 아이유 - 내 손을 잡아
+- 아이유 - 잔소리
+- 아이유 - 좋은 날
+- 악동뮤지션 - Give Love
+- 악동뮤지션 - 외국인의 고백
+- 에일리 - U&I
+- 에일리 - 보여줄게
+- 에일리 - 첫눈처럼 너에게 가겠다
+- 에픽하이 - Fly
+- 에픽하이 - 우산
+- 윤도현 - 나는 나비
+- 윤미래 - As Time Goes By
+- 윤미래 - 시간이 흐른 뒤
+- 윤하 - 26
+- 윤하 - 기다리다
+- 윤하 - 비밀번호 486
+- 윤하 - 서쪽 하늘
+- 윤하 - 오르트구름
+- 윤하 - 우리가 헤어진 진짜 이유
+- 윤하 - 우린 달라졌을까
+- 윤하 - 우산
+- 윤하 - 크림소스 파스타
+- 윤하 - 헤어졌어요
+- 윤하 - 혜성
+- 자우림 - 매직카펫라이드
+- 자우림 - 스물다섯 스물하나
+- 자이언티 - *
+- 체리필터 - Happy Day
+- 체리필터 - 오리 날다
+- 체리필터 - 유쾌한 마녀
+- 카라 - 미스터
+- 태양 - 눈, 코, 입
+- 태연 - 사계
+- 태연 - 제주도의 푸른 밤
+- 투개월 - 여우야
+- 패닉 - 달팽이
