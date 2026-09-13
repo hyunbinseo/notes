@@ -105,3 +105,11 @@ Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" 
 Set-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Tracing\RazerInstaller_RASAPI32" -Name "Start" -Value 4 -Type DWord
 Set-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Tracing\RazerInstaller_RASMANCS" -Name "Start" -Value 4 -Type DWord
 ```
+
+## Reset Windows Hello
+
+```powershell
+certutil /deletehellocontainer
+# 이 작업을 완료하려면 지금 로그아웃하세요.
+# CertUtil: -DeleteHelloContainer 명령이 성공적으로 완료되었습니다.
+```
