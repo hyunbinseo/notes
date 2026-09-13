@@ -147,3 +147,21 @@ mmcli -m 0
 nmcli connection add type gsm ifname wwan0mbim0 con-name "SKT-LTE" apn "lte.sktelecom.com" connection.metered yes user "" password ""
 # 'SKT-LTE' 연결이 성공적으로 추가되었습니다.
 ```
+
+## Connect Brother Scanner
+
+Download and install the `brscan5` RPM.
+
+```bash
+sudo dnf install ./brscan5-1.7.0-0.x86_64.rpm
+```
+
+Plug in the scanner; Skanpage and other scanning apps should detect it.
+
+```bash
+sudo brsaneconfig5 -d
+# found possible USB scanner (vendor=0x04f9 [Brother], product=0x0459 [ADS-1200]) at libusb:003:021
+
+scanimage -L
+# device `brother5:bus3;dev2' is a Brother ADS-1200 USB scanner
+```
