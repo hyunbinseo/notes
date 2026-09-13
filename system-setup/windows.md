@@ -32,6 +32,9 @@ $env:CLAUDE_CODE_USE_POWERSHELL_TOOL = "1"
 
 ### winget
 
+> [!NOTE]
+> Open PowerShell as administrator for silent installs.
+
 ```powershell
 $packages = @(
 	# 'astral-sh.uv',
@@ -82,11 +85,13 @@ $packages = @(
 
 foreach ($package in $packages) {
 	Write-Host "Installing $package..."
-	winget install --id $package --silent --accept-package-agreements --accept-source-agreements
+	winget install --id $package --silent --disable-interactivity --accept-package-agreements --accept-source-agreements
 }
 
+```
+
+```powershell
 winget install --id Microsoft.VisualStudioCode --override '/SILENT /mergetasks="!runcode,addcontextmenufiles,addcontextmenufolders"'
-# winget install -e --id=Microsoft.VisualStudioCode.Insiders --override '/SILENT /mergetasks="!runcode,addcontextmenufiles,addcontextmenufolders"'
 ```
 
 ## Remove Bloatware
