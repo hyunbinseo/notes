@@ -1,5 +1,11 @@
 OS-independent common setup lives in [`common.md`](./common.md).
 
+## Firmware Update
+
+```bash
+fwupdmgr update
+```
+
 ## Bottles
 
 ### fcitx5 IME 설정
