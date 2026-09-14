@@ -1,6 +1,6 @@
 A NordVPN provided OpenVPN configuration file (`*.ovpn`) works with the `openvpn` CLI:
 
-```shell
+```bash
 sudo openvpn --config ./config.ovpn --auth-user-pass ./pass.txt
 ```
 
