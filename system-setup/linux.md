@@ -6,6 +6,15 @@ OS-independent common setup lives in [`common.md`](./common.md).
 fwupdmgr update
 ```
 
+## Read SMS (ModemManager)
+
+```bash
+mmcli -L
+# /org/freedesktop/ModemManager1/Modem/16 [mtk] MBIM [14C3:4D75]
+
+mmcli -m 16 --messaging-list-sms | head -n 3 | grep -oP '(?<=SMS/)\d+' | while read -r id; do mmcli -s "$id"; done
+```
+
 ## 카카오톡 설치
 
 ```bash
