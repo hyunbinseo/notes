@@ -29,8 +29,14 @@ winecfg # 그래픽 / 화면 해상도: 158 dpi
 # 96 * 1.65 = 158
 
 wine KakaoTalk_Setup.exe # 64-bit 설치 파일
+```
 
-# 카카오톡 설정 / 화면 / 기본
-# - 화면 배율: 200%
-# - 글씨체: Pretendard
+PC 카카오톡 내 설정을 변경한다:
+
+- 화면 / 기본 / 화면 배율: 200% (글씨체: Pretendard)
+- 채팅 / 다운로드 폴더: `/home` 디렉터리 직접 사용 가능
+
+```plaintext
+C:\users\<username>\Downloads  # 설정에선 이렇게 표시되지만
+/home/<username>/다운로드/       # 실제로는 여기에 저장된다
 ```
