@@ -9,10 +9,18 @@ fwupdmgr update
 ## Read SMS (ModemManager)
 
 ```bash
-mmcli -L
-# /org/freedesktop/ModemManager1/Modem/16 [mtk] MBIM [14C3:4D75]
+read-sms() {
+	local count="${1:-3}"
+	local modem
+	# the modem number can change across reboots/reconnects
+	modem=$(mmcli -L | grep -oP '(?<=Modem/)\d+' | head -n 1)
+	mmcli -m "$modem" --messaging-list-sms | head -n "$count" | grep -oP '(?<=SMS/)\d+' | while read -r id; do mmcli -s "$id"; done
+}
+```
 
-mmcli -m 16 --messaging-list-sms | head -n 3 | grep -oP '(?<=SMS/)\d+' | while read -r id; do mmcli -s "$id"; done
+```bash
+read-sms
+read-sms 10
 ```
 
 ## 카카오톡 설치
