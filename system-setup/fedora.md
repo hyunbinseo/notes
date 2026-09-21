@@ -21,6 +21,22 @@ timedatectl status
 timedatectl set-local-rtc 0
 ```
 
+## Remove KDE Personal Information Metapackage (PIM)
+
+```bash
+# dnf repoquery --requires kdepim
+sudo dnf remove \
+  akregator \
+  kaddressbook \
+  kalarm \
+  kdepim \
+  kdepim-common \
+  kmail \
+  knotes \
+  kontact \
+  korganizer
+```
+
 ## Enable Auto Update
 
 See https://docs.rockylinux.org/10/guides/security/dnf_automatic/
