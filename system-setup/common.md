@@ -2,7 +2,7 @@
 
 ### Apps
 
-- https://github.com/imsyy/yt-dlp-gui
+- https://github.com/nickvisionapps/parabolic
 - https://github.com/sourcegit-scm/sourcegit
 
 ### Fonts
