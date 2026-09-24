@@ -184,7 +184,7 @@ nmcli connection add type gsm ifname wwan0mbim0 con-name "SKT-LTE" apn "lte.skte
 Download and install the `brscan5` RPM.
 
 ```bash
-sudo dnf install ./brscan5-1.7.0-0.x86_64.rpm
+sudo dnf install ./brscan5-*.x86_64.rpm
 ```
 
 Plug in the scanner; Skanpage and other scanning apps should detect it.
