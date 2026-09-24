@@ -23,6 +23,26 @@ read-sms
 read-sms 10
 ```
 
+## Tint Terminal on SSH
+
+```zsh
+# ~/.zshrc only
+ssh() {
+	# use dark red background
+	printf '\e]11;#2a0a0a\a' > /dev/tty
+	{
+		command ssh "$@"
+	} always {
+		# reset to profile background
+		printf '\e]111\a' > /dev/tty
+	}
+}
+
+# Tested with zsh 5.9:
+# - Konsole 26.08.1: works
+# - Zed 1.21.0: no effect
+```
+
 ## 카카오톡 설치
 
 ```bash
