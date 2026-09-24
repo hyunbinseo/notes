@@ -67,24 +67,20 @@ If Fedora's `firefox` package is already installed, switching to the Mozilla rep
 
 > 문제: 설치된 꾸러미 firefox-langpacks-153.0.3-1.fc44.x86_64에는 firefox = 153.0.3-1.fc44이 필요하지만, 공급 업체가 없어 설치할 수 없습니다
 
-## Install Orca
+## Install Orca (ADE, AI Orchestrator)
 
-See https://www.onorca.dev/docs/install
+Download the [latest](https://github.com/stablyai/orca/releases/latest) RPM from GitHub and install it.
 
-Fedora's `orca` package is the GNOME screen reader, not the Orca agent IDE. Install the latest stable x86_64 RPM from Orca's official GitHub release:
+> [!NOTE]
+> Fedora's [`orca`](https://gitlab.gnome.org/GNOME/orca) package is the GNOME screen reader, a different app.
 
 ```bash
-orca_rpm_url="$(gh api repos/stablyai/orca/releases/latest \
-  --jq '.assets[] | select(.name | endswith(".x86_64.rpm")) | .browser_download_url')"
-sudo dnf install -y "$orca_rpm_url"
+sudo dnf install ./orca-ide-*.x86_64.rpm
+orca-ide open
 ```
 
-Run it from the app menu or with `orca-ide`; the `orca` command runs the screen reader. The RPM is not updated by `dnf-automatic`. When Orca reports an update, quit the app and rerun the commands above.
-
-On first launch, allow home directory access and import `~/.codex` if needed. Codex must already be installed and logged in.
-
-> [!WARNING]
-> Orca launches supported agents with permission-bypass flags by default. To require approval prompts, select Manual under Settings / Agents / Agent Permissions.
+> [!TIP]
+> To update, repeat the install steps with the new RPM. The built-in updater only downloads the RPM.
 
 ## Setup Tailscale
 
