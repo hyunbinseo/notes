@@ -83,6 +83,21 @@ If Fedora's `firefox` package is already installed, switching to the Mozilla rep
 
 > 문제: 설치된 꾸러미 firefox-langpacks-153.0.3-1.fc44.x86_64에는 firefox = 153.0.3-1.fc44이 필요하지만, 공급 업체가 없어 설치할 수 없습니다
 
+## Install Orca (ADE, AI Orchestrator)
+
+Download the [latest](https://github.com/stablyai/orca/releases/latest) RPM from GitHub and install it.
+
+> [!NOTE]
+> Fedora's [`orca`](https://gitlab.gnome.org/GNOME/orca) package is the GNOME screen reader, a different app.
+
+```bash
+sudo dnf install ./orca-ide-*.x86_64.rpm
+orca-ide open
+```
+
+> [!TIP]
+> To update, repeat the install steps with the new RPM. The built-in updater only downloads the RPM.
+
 ## Setup Tailscale
 
 See https://tailscale.com/kb/1130/install-fedora
