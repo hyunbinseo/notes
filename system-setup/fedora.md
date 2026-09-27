@@ -128,9 +128,24 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ## Replace Korean IME
 
+See https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland#KDE_Plasma
+
 ```bash
 sudo dnf install -y fcitx5 fcitx5-hangul
-# KDE / 시스템 설정 / 키보드 / 가상 키보드 / Fcitx 5 선택 후 적용
+```
+
+시스템 설정 / 키보드 / 가상 키보드 / Fcitx 5 선택 후 적용
+
+```bash
+# For XWayland apps (e.g. Wine)
+mkdir -p ~/.config/environment.d
+echo 'XMODIFIERS=@im=fcitx' > ~/.config/environment.d/im.conf
+```
+
+Re-login, then verify:
+
+```bash
+echo $XMODIFIERS # @im=fcitx
 ```
 
 ## Remap Keys
