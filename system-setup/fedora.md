@@ -77,11 +77,19 @@ sudo dnf install -y google-chrome-stable
 
 ## Install Firefox
 
-Fedora's `firefox` package tracks stable only. To install `firefox-beta`, `firefox-nightly`, or similar, add [Mozilla's official RPM repository](https://support.mozilla.org/en-US/kb/install-firefox-linux).
+Use [Mozilla's RPM repository](https://support.mozilla.org/en-US/kb/install-firefox-linux) to:
 
-If Fedora's `firefox` package is already installed, switching to the Mozilla repo can fail:
+- Get releases on day one.
+- Install any channel side by side: `firefox`, `firefox-beta` etc.
 
-> 문제: 설치된 꾸러미 firefox-langpacks-153.0.3-1.fc44.x86_64에는 firefox = 153.0.3-1.fc44이 필요하지만, 공급 업체가 없어 설치할 수 없습니다
+```bash
+# Back up profiles first
+sudo dnf remove -y firefox
+
+# Add Mozilla's RPM repository first (see link above)
+sudo dnf install -y firefox firefox-l10n-ko            # stable
+sudo dnf install -y firefox-beta firefox-beta-l10n-ko  # beta
+```
 
 ## Install Orca (ADE, AI Orchestrator)
 
