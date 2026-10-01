@@ -6,43 +6,6 @@ OS-independent common setup lives in [`common.md`](./common.md).
 fwupdmgr update
 ```
 
-## Read SMS (ModemManager)
-
-```bash
-read-sms() {
-	local count="${1:-3}"
-	local modem
-	# the modem number can change across reboots/reconnects
-	modem=$(mmcli -L | grep -oP '(?<=Modem/)\d+' | head -n 1)
-	mmcli -m "$modem" --messaging-list-sms | head -n "$count" | grep -oP '(?<=SMS/)\d+' | while read -r id; do mmcli -s "$id"; done
-}
-```
-
-```bash
-read-sms
-read-sms 10
-```
-
-## Tint Terminal on SSH
-
-```zsh
-# ~/.zshrc only
-ssh() {
-	# use dark red background
-	printf '\e]11;#2a0a0a\a' > /dev/tty
-	{
-		command ssh "$@"
-	} always {
-		# reset to profile background
-		printf '\e]111\a' > /dev/tty
-	}
-}
-
-# Tested with zsh 5.9:
-# - Konsole 26.08.1: works
-# - Zed 1.21.0: no effect
-```
-
 ## 카카오톡 설치
 
 ```bash
