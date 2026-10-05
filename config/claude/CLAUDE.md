@@ -1,4 +1,11 @@
-Use `pnpm` and `pnpm dlx`; `npm` and `npx` are not available.
+Use [Vite+](https://viteplus.dev/) commands instead of package-manager-specific ones:
+
+```shell
+vpr <script>  # package.json scripts
+vp exec <bin> # project binaries
+vpx <package> # local, else downloaded
+vp <command>  # built-ins (e.g. fmt, test)
+```
 
 If an MCP server fails to connect (e.g. `/mcp` shows `ENOENT`), warn the user.
 
