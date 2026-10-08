@@ -9,10 +9,8 @@ fwupdmgr update
 ## 카카오톡 설치
 
 ```bash
-sudo dnf install wine
-
 wine --version
-# wine-11.0 (Staging)
+# wine-11.0 (Staging) on Fedora 44
 
 winecfg # 그래픽 / 화면 해상도: 158 dpi
 # kscreen-doctor -o 기준

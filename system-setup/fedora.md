@@ -73,6 +73,8 @@ sudo dnf install -y code # or code-insiders
 
 # See https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/
 sudo dnf install -y google-chrome-stable
+
+sudo dnf install -y wine
 ```
 
 ## Install Firefox
