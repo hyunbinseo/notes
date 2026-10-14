@@ -4,8 +4,9 @@ Use [Vite+](https://viteplus.dev/) commands instead of package-manager-specific 
 vpr <script>  # package.json scripts
 vp exec <bin> # project binaries
 vpx <package> # local, else downloaded
-vp <command>  # built-ins (e.g. fmt, test)
 ```
+
+Don't use Vite+ built-ins (e.g. `vp fmt`, `vp test`) unless instructed. Use the project's scripts instead.
 
 If an MCP server fails to connect (e.g. `/mcp` shows `ENOENT`), warn the user.
 
