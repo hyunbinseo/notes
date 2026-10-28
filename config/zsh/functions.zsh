@@ -48,6 +48,9 @@ ssh() {
 		command ssh "$@"
 	} always {
 		# reset to profile background
-		printf '\e]111\a' > /dev/tty
+		# - Konsole drops OSC 111 without a trailing ;
+		# - Konsole applies color changes in a 20ms batch, in unspecified order.
+		#   If ssh exits fast, the empty OSC 11 drops the pending tint.
+		printf '\e]11;\a\e]111;\a' > /dev/tty
 	}
 }
