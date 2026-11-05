@@ -31,26 +31,30 @@ Commenting out these options fixed all cases:
 
 ## Connect on Linux
 
-(Optional) Inline credentials in the config file:
-
-> [!WARNING]
-> Imported configs are stored unencrypted in `/var/lib/openvpn3/configs/`.
-
-```diff
--auth-user-pass
-+<auth-user-pass>
-+username
-+password
-+</auth-user-pass>
-```
-
-Then import and connect:
+OpenVPN 2 is packaged as `openvpn`, separate from the OpenVPN 3 Linux client. Installing the NetworkManager plugin pulls it in:
 
 ```bash
-openvpn3 config-import --config ./config.ovpn --name nord --persistent
-rm ./config.ovpn # if credentials were inlined
+sudo dnf install NetworkManager-openvpn
+```
 
-openvpn3 session-start --config nord # check for 'Connected to'
-openvpn3 sessions-list
-openvpn3 session-manage --config nord --disconnect
+Import the config, then store the credentials as a connection secret:
+
+```bash
+nmcli connection import type openvpn file ./config.ovpn
+# The connection name is derived from the file name (e.g. nord)
+
+nmcli connection modify nord vpn.user-name 'username'
+nmcli connection modify nord vpn.secrets 'password=password'
+
+# Username/password only, with no client certificate
+nmcli connection modify nord +vpn.data 'connection-type=password'
+
+nmcli connection up nord
+nmcli connection down nord
+```
+
+Skipping `connection-type=password` leaves the imported connection as `tls`, and activation fails with:
+
+```plaintext
+Options error: No client-side authentication method is specified. You must use either --cert/--key, --pkcs12, or --auth-user-pass
 ```
