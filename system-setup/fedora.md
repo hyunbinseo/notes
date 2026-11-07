@@ -77,6 +77,20 @@ sudo dnf install -y google-chrome-stable
 sudo dnf install -y wine
 ```
 
+## Enable RPM Fusion (Free)
+
+See https://rpmfusion.org/Configuration
+
+> [!NOTE]
+> The release/repository RPM adds the repo: it installs `.repo` files (in `/usr/share/dnf5/repos.d/`) and GPG keys. The repo also publishes `rpmfusion-free-release` itself, so `dnf upgrade` keeps them current. [PostgreSQL](https://yum.postgresql.org/repopackages/) and Fedora itself (`fedora-repos`) work the same way.
+
+```bash
+sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
+
+# HEIC, HEIF decoding with HEVC
+sudo dnf install -y libheif-freeworld
+```
+
 ## Install Firefox
 
 Use [Mozilla's RPM repository](https://support.mozilla.org/en-US/kb/install-firefox-linux) to:
