@@ -52,4 +52,5 @@ git clone https://alice@github.com/mona/test
 
 ```plaintext
 about:config / browser.tabs.dragDrop.createGroup.delayMS
+about:keyboard / 편집 / 글자 방향 변경 / Ctrl+Shift+X: 단축키 삭제
 ```
