@@ -107,20 +107,16 @@ sudo dnf install -y firefox firefox-l10n-ko            # stable
 sudo dnf install -y firefox-beta firefox-beta-l10n-ko  # beta
 ```
 
-## Install Orca (ADE, AI Orchestrator)
+## Install RPM Apps
 
-Download the [latest](https://github.com/stablyai/orca/releases/latest) RPM from GitHub and install it.
+`dnf install` accepts a local RPM file or its URL.
 
-> [!NOTE]
-> Fedora's [`orca`](https://gitlab.gnome.org/GNOME/orca) package is the GNOME screen reader, a different app.
+A file-based install updates through `dnf upgrade` only if the RPM also adds a repo (see [RPM Fusion](#enable-rpm-fusion-free)). Otherwise, rerun the install to update; built-in updaters may only download the RPM.
 
 ```bash
-sudo dnf install ./orca-ide-*.x86_64.rpm
-orca-ide open
+# e.g. Hex https://github.com/anomalyco/hex
+sudo dnf install https://anoma.ly/hex/download/linux-x64-rpm
 ```
-
-> [!TIP]
-> To update, repeat the install steps with the new RPM. The built-in updater only downloads the RPM.
 
 ## Setup Tailscale
 
