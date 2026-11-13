@@ -28,6 +28,12 @@ See https://www.reddit.com/r/kde/comments/5sel7m/comment/n8t1qe6
 
 Enabled by default. Not customizable. See https://kde.org/ko/announcements/plasma/5/5.25.0/
 
+## Virtual Desktops
+
+시스템 설정 / 창 관리 / 가상 바탕 화면 / 전환 시 사용할 애니메이션: 없음
+
+Applies to both `Ctrl + Meta + Left/Right` and four-finger horizontal swipes.
+
 ## Konsole
 
 `Ctrl + Alt + 0` resets the zoom level
