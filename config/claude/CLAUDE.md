@@ -23,10 +23,16 @@ When debugging (e.g. a Sentry event), consider whether the bug is in a library o
 
 ## Git Commits
 
-When the user asks for attribution in a commit, add a trailer in this format: `Assisted-by: AGENT_NAME:MODEL_VERSION` (e.g. `Assisted-by: Claude:claude-sonnet-5`).
+- Title only. Add a body only when asked.
+- When asked for attribution, add an `Assisted-by: <agent>:<model>` trailer (e.g. `Assisted-by: Claude:claude-opus-5-5`).
 
 ## Writing
 
-When writing content to be posted elsewhere (GitHub issues, PR descriptions, comments, Slack messages), be concise by default: short sentences, no padding, no restating context the reader already has.
+Draft content to be posted elsewhere (GitHub issues, PR descriptions, comments, Slack messages) as Markdown files:
 
-When writing a GitHub issue or comment, draft it as a Markdown file in the repo's `.drafts/` folder (add it to `.git/info/exclude` so it stays untracked) and revise that file as we iterate. For issues, follow the repo's issue template (`.github/ISSUE_TEMPLATE/`) if one exists. Don't post it without explicit confirmation.
+- Save them in the repo's `.drafts/` folder and revise them there.
+  - If the global gitignore lacks `.drafts/`, add it.
+  - Outside a Git repo, ask where to save them.
+- Keep them concise: short sentences, no padding or restated context.
+- Follow the repo's issue or PR template if one exists.
+- Don't post without explicit confirmation.
