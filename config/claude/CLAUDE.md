@@ -35,4 +35,5 @@ Draft content to be posted elsewhere (GitHub issues, PR descriptions, comments, 
   - Outside a Git repo, ask where to save them.
 - Keep them concise: short sentences, no padding or restated context.
 - Follow the repo's issue or PR template if one exists.
+- End GitHub references with a space or punctuation (not `#70처럼`).
 - Don't post without explicit confirmation.
