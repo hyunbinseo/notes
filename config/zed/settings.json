@@ -1,19 +1,8 @@
 {
 	"agent": {
 		"dock": "right",
-		"favorite_models": [],
-		"model_parameters": [],
 		"threads_sidebar": {
 			"position": "right"
-		}
-	},
-	"agent_servers": {
-		"claude-acp": {
-			"default_config_options": {
-				"mode": "bypassPermissions",
-				"model": "default"
-			},
-			"type": "registry"
 		}
 	},
 	"base_keymap": "VSCode",
