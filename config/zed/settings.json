@@ -40,9 +40,6 @@
 				"prettier"
 			]
 		},
-		"Markdown": {
-			"hard_tabs": false
-		},
 		"Svelte": {
 			"formatter": [
 				{ "code_action": "source.organizeImports" },
