@@ -33,6 +33,9 @@
 		"dock": "left"
 	},
 	"hard_tabs": true, // oxfmt reads ~/.editorconfig instead
+	// BLOCKED Start oxlint only if installed, then remove this
+	// See https://github.com/oxc-project/oxc-zed/issues/29
+	"language_servers": ["!oxlint", "..."],
 	"languages": {
 		"Angular": { "formatter": [{ "language_server": { "name": "oxfmt" } }] },
 		"Astro": { "formatter": [{ "language_server": { "name": "oxfmt" } }] },
@@ -44,6 +47,7 @@
 			"formatter": [
 				{ "code_action": "source.organizeImports" },
 				{ "code_action": "source.fixAll.eslint" },
+				{ "code_action": "source.fixAll.oxc" },
 				{ "language_server": { "name": "oxfmt" } }
 			]
 		},
@@ -58,15 +62,16 @@
 			"formatter": [
 				{ "code_action": "source.organizeImports" },
 				{ "code_action": "source.fixAll.eslint" },
+				{ "code_action": "source.fixAll.oxc" },
 				{ "language_server": { "name": "oxfmt" } }
-			],
-			"language_servers": ["!oxlint", "..."]
+			]
 		},
 		"TOML": { "formatter": [{ "language_server": { "name": "oxfmt" } }] },
 		"TSX": {
 			"formatter": [
 				{ "code_action": "source.organizeImports" },
 				{ "code_action": "source.fixAll.eslint" },
+				{ "code_action": "source.fixAll.oxc" },
 				{ "language_server": { "name": "oxfmt" } }
 			]
 		},
@@ -74,6 +79,7 @@
 			"formatter": [
 				{ "code_action": "source.organizeImports" },
 				{ "code_action": "source.fixAll.eslint" },
+				{ "code_action": "source.fixAll.oxc" },
 				{ "language_server": { "name": "oxfmt" } }
 			]
 		},
