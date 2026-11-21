@@ -52,7 +52,7 @@ sudo systemctl enable --now dnf-automatic.timer
 See https://rpmfusion.org/Configuration
 
 > [!NOTE]
-> The release/repository RPM adds the repo: it installs `.repo` files (in `/usr/share/dnf5/repos.d/`) and GPG keys. The repo also publishes `rpmfusion-free-release` itself, so `dnf upgrade` keeps them current. [PostgreSQL](https://yum.postgresql.org/repopackages/) and Fedora itself (`fedora-repos`) work the same way.
+> The release RPM installs the `.repo` files and GPG keys. The repo also ships that RPM, so `dnf upgrade` keeps both current. Same for [PostgreSQL](https://yum.postgresql.org/repopackages/) and Fedora (`fedora-repos`).
 
 ```bash
 sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
@@ -71,30 +71,8 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 ## Install Apps
 
-> [!WARNING]
-> Install these apps via `dnf` — Flatpak sandboxing causes issues.
-
-```bash
-# See https://code.visualstudio.com/docs/setup/linux
-sudo dnf install -y code # or code-insiders
-
-# See https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/
-sudo dnf install -y google-chrome-stable
-
-sudo dnf install -y wine
-```
-
-Flatpaks that run commands on the host work fine:
-
-```bash
-# See https://zed.dev/docs/linux
-flatpak install -y flathub dev.zed.Zed
-
-# KDE's new terminal, built on libghostty-vt
-flatpak install -y flathub org.kde.kwi
-```
-
-시스템 설정 / 기본 프로그램 / 터미널 에뮬레이터: Kwi
+- Flatpak by default. [Zed](https://flathub.org/apps/dev.zed.Zed) and [Kwi](https://flathub.org/apps/org.kde.kwi) are fine: they run commands on the host.
+- `dnf` if Flatpak sandboxing breaks the app: [VS Code](https://code.visualstudio.com/docs/setup/linux), [Google Chrome](https://docs.fedoraproject.org/en-US/quick-docs/installing-chromium-or-google-chrome-browsers/), Wine
 
 ### Firefox
 
@@ -143,12 +121,11 @@ chsh -l
 chsh -s /bin/zsh
 ```
 
-- https://github.com/ohmyzsh/ohmyzsh
-- https://github.com/zsh-users/zsh-autosuggestions
+Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), then [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions):
 
 ```bash
-# Path if installed via the dnf package
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+sudo dnf install -y zsh-autosuggestions
+echo 'source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
 ```
 
 ## Replace Korean IME
@@ -180,7 +157,7 @@ e.g. F12 as HOME on HP EliteBook X G1i
 ```bash
 sudo dnf copr enable -y alternateved/keyd
 sudo dnf install -y keyd
-sudo systemctl enable keyd --now
+sudo systemctl enable --now keyd
 sudo nano /etc/keyd/default.conf # See https://github.com/rvaiya/keyd
 ```
 
@@ -190,30 +167,11 @@ sudo nano /etc/keyd/default.conf # See https://github.com/rvaiya/keyd
 mmcli -L
 # /org/freedesktop/ModemManager1/Modem/0 [mtk] MBIM [14C3:4D75]
 
-mmcli -m 0
-#  -----------------------------------
-#  General   |                   path: /org/freedesktop/ModemManager1/Modem/0
-#  -----------------------------------
-#  Hardware  |           manufacturer: mtk
-#            |                  model: MBIM [14C3:4D75]
-#  -----------------------------------
-#  System    |                drivers: mtk_t7xx
-#            |                 plugin: mtk
-#            |           primary port: wwan0mbim0
-#            |                  ports: wwan0 (net), wwan0at0 (at), wwan0mbim0 (mbim)
-#  -----------------------------------
-#  Status    |                   lock: sim-pin2
-#            |         unlock retries: sim-pin (3), sim-puk (10), sim-pin2 (3), sim-puk2 (10)
-#            |                  state: registered
-#            |            power state: on
+mmcli -m 0 # output trimmed
+#  Hardware  |                  model: MBIM [14C3:4D75]
+#  System    |           primary port: wwan0mbim0
+#  Status    |                  state: registered
 #            |            access tech: lte
-#            |         signal quality: 83% (recent)
-#  -----------------------------------
-#  SIM       |       primary sim path: /org/freedesktop/ModemManager1/SIM/0
-#            |         sim slot paths: slot 1: /org/freedesktop/ModemManager1/SIM/0 (active)
-#            |                         slot 2: /org/freedesktop/ModemManager1/SIM/1
-#  -----------------------------------
-#  Bearer    |                  paths: /org/freedesktop/ModemManager1/Bearer/1
 
 nmcli connection add type gsm ifname wwan0mbim0 con-name "SKT-LTE" apn "lte.sktelecom.com" connection.metered yes user "" password ""
 # 'SKT-LTE' 연결이 성공적으로 추가되었습니다.
