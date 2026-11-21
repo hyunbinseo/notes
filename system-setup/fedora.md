@@ -2,16 +2,7 @@
 - Distro-agnostic Linux setup lives in [`linux.md`](./linux.md).
 - KDE Plasma desktop tweaks live in [`kde-plasma.md`](./kde-plasma.md).
 
-```bash
-cat /etc/os-release
-# NAME="Fedora Linux"
-# VERSION="44 (KDE Plasma Desktop Edition)"
-# RELEASE_TYPE=stable
-# ID=fedora
-# VERSION_ID=44
-# VERSION_CODENAME=""
-# PRETTY_NAME="Fedora Linux 44 (KDE Plasma Desktop Edition)"
-```
+Last reviewed on Fedora 45 (KDE Plasma).
 
 ## Fix Incorrect Time
 

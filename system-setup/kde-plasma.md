@@ -1,14 +1,6 @@
 Fedora-specific setup lives in [`fedora.md`](./fedora.md).
 
-```bash
-kinfo
-# Operating System: Fedora Linux 44
-# KDE Plasma Version: 6.7.4
-# KDE Frameworks Version: 6.28.0
-# Qt Version: 6.11.1
-# Kernel Version: 7.1.6-201.fc44.x86_64 (64-bit)
-# Graphics Platform: Wayland
-```
+Last reviewed on Plasma 6.8.
 
 ## Panel (Taskbar)
 
