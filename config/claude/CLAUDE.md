@@ -33,6 +33,8 @@ Draft content to be posted elsewhere (GitHub issues, PR descriptions, comments, 
 - Save them in the repo's `.drafts/` folder and revise them there.
   - If the global gitignore lacks `.drafts/`, add it.
   - Outside a Git repo, ask where to save them.
+  - For major revisions, keep the original for comparison.
+  - After posting, ask whether to delete them.
 - Keep them concise: short sentences, no padding or restated context.
 - Follow the repo's issue or PR template if one exists.
 - End GitHub references with a space or punctuation (not `#70처럼`).
