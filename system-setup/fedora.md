@@ -77,6 +77,18 @@ sudo dnf install -y google-chrome-stable
 sudo dnf install -y wine
 ```
 
+Flatpaks that run commands on the host work fine:
+
+```bash
+# See https://zed.dev/docs/linux
+flatpak install -y flathub dev.zed.Zed
+
+# KDE's new terminal, built on libghostty-vt
+flatpak install -y flathub org.kde.kwi
+```
+
+시스템 설정 / 기본 프로그램 / 터미널 에뮬레이터: Kwi
+
 ## Enable RPM Fusion (Free)
 
 See https://rpmfusion.org/Configuration

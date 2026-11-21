@@ -34,10 +34,6 @@ Enabled by default. Not customizable. See https://kde.org/ko/announcements/plasm
 
 Applies to both `Ctrl + Meta + Left/Right` and four-finger horizontal swipes.
 
-## Konsole
-
-`Ctrl + Alt + 0` resets the zoom level
-
 ## KRunner
 
 See https://www.reddit.com/r/kde/comments/v9snu6/comment/ne5anfl
