@@ -37,7 +37,7 @@ read-sms() {
 
 # Tint terminal on SSH
 # Tested with zsh 5.9:
-# - Konsole 26.08.1: works
+# - Kwi 0.1.0: works
 # - Zed 1.21.0: no effect
 ssh() {
 	# skip non-interactive use, e.g. ssh host cmd | less
@@ -48,9 +48,6 @@ ssh() {
 		command ssh "$@"
 	} always {
 		# reset to profile background
-		# - Konsole drops OSC 111 without a trailing ;
-		# - Konsole applies color changes in a 20ms batch, in unspecified order.
-		#   If ssh exits fast, the empty OSC 11 drops the pending tint.
-		printf '\e]11;\a\e]111;\a' > /dev/tty
+		printf '\e]111\a' > /dev/tty
 	}
 }
