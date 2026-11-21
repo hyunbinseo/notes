@@ -23,8 +23,10 @@ When debugging (e.g. a Sentry event), consider whether the bug is in a library o
 
 ## Git Commits
 
-- Title only. Add a body only when asked.
-- When asked for attribution, add an `Assisted-by: <agent>:<model>` trailer (e.g. `Assisted-by: Claude:claude-opus-5-5`).
+Title only. Add a body only when asked, except for these trailers:
+
+- `Closes: #<id>`: one per GitHub issue the commit fully resolves on its own (like a squashed PR).
+- `Assisted-by: <agent>:<model>`: when asked for attribution (e.g. `Assisted-by: Claude:claude-opus-5-5`).
 
 ## Writing
 
