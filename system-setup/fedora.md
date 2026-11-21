@@ -47,6 +47,20 @@ sudo systemctl enable --now dnf-automatic.timer
 
 시스템 설정 / 소프트웨어 업데이트 / 알림 빈도: 하지 않음
 
+## Enable RPM Fusion (Free)
+
+See https://rpmfusion.org/Configuration
+
+> [!NOTE]
+> The release/repository RPM adds the repo: it installs `.repo` files (in `/usr/share/dnf5/repos.d/`) and GPG keys. The repo also publishes `rpmfusion-free-release` itself, so `dnf upgrade` keeps them current. [PostgreSQL](https://yum.postgresql.org/repopackages/) and Fedora itself (`fedora-repos`) work the same way.
+
+```bash
+sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
+
+# HEIC, HEIF decoding with HEVC
+sudo dnf install -y libheif-freeworld
+```
+
 ## Enable Flathub
 
 See https://flathub.org/setup/Fedora
@@ -54,6 +68,8 @@ See https://flathub.org/setup/Fedora
 ```bash
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
+
+## Install Apps
 
 > [!WARNING]
 > Install these apps via `dnf` — Flatpak sandboxing causes issues.
@@ -80,21 +96,7 @@ flatpak install -y flathub org.kde.kwi
 
 시스템 설정 / 기본 프로그램 / 터미널 에뮬레이터: Kwi
 
-## Enable RPM Fusion (Free)
-
-See https://rpmfusion.org/Configuration
-
-> [!NOTE]
-> The release/repository RPM adds the repo: it installs `.repo` files (in `/usr/share/dnf5/repos.d/`) and GPG keys. The repo also publishes `rpmfusion-free-release` itself, so `dnf upgrade` keeps them current. [PostgreSQL](https://yum.postgresql.org/repopackages/) and Fedora itself (`fedora-repos`) work the same way.
-
-```bash
-sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm"
-
-# HEIC, HEIF decoding with HEVC
-sudo dnf install -y libheif-freeworld
-```
-
-## Install Firefox
+### Firefox
 
 Use [Mozilla's RPM repository](https://support.mozilla.org/en-US/kb/install-firefox-linux) to:
 
@@ -110,7 +112,7 @@ sudo dnf install -y firefox firefox-l10n-ko            # stable
 sudo dnf install -y firefox-beta firefox-beta-l10n-ko  # beta
 ```
 
-## Install RPM Apps
+### RPM Files
 
 `dnf install` accepts a local RPM file or its URL.
 
